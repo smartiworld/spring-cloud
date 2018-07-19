@@ -9,7 +9,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>iworld.ohelp.register.server-ha</artifactId>
-	<name>ohelp.register.server</name>
+	<name>ohelp.register.server.ha</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
