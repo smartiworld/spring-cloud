@@ -1,16 +1,52 @@
-server:
-  port: 8761
-eureka:
-  instance:
-    preferIpAddress : true
-    hostname: localhost
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://admin:root@localhost:8761/eureka/
 spring:
   security:
     user:
       name: admin
       password: root
+  application:
+    name: ohelp-register-server-ha
+
+---
+spring:
+  profiles: eureka1
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: eureka1
+    instanceId: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://admin:root@eureka2:8762/eureka/,http://admin:root@eureka3:8763/eureka/
+
+---
+spring:
+  profiles: eureka2
+server:
+  port: 8762
+eureka:
+  instance:
+    preferIpAddress : true
+    hostname: eureka2
+    instanceId: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://admin:root@eureka1:8761/eureka/,http://admin:root@eureka3:8763/eureka/
+      
+---
+spring:
+  profiles: eureka3
+server:
+  port: 8763
+eureka:
+  instance:
+    preferIpAddress : true
+    hostname: eureka3
+    instanceId: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://admin:root@eureka1:8761/eureka/,http://admin:root@eureka2:8762/eureka/
