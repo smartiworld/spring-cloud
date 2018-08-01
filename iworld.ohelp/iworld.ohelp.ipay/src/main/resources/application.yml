@@ -14,3 +14,7 @@ eureka:
 #MICSERVICE.USER:
 #  ribbon:
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+#    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+#    NFLoadBalancerPingClassName:
+#    NIWSServerListClassName:
+#    NIWSServerListFilterClassName:
