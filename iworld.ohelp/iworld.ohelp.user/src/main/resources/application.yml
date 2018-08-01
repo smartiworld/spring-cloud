@@ -1,5 +1,5 @@
 server:
-  port: 8990
+  port: 8993
 spring:
   application:
     name: micservice.user

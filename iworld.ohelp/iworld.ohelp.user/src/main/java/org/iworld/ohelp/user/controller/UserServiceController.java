@@ -1,20 +1,23 @@
 package org.iworld.ohelp.user.controller;
 
 import org.iworld.ohelp.user.model.User;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.google.gson.Gson;
 
 @RestController
+@RequestMapping(value = "/micuser")
 public class UserServiceController {
 
-	public String findUser() {
+	@GetMapping(value = "/userinfo/{id}")
+	public User findUser(@PathVariable Integer id) {
 		User user = new User();
-		user.setName("zhangsan");
-		user.setUserId(1);
-		Gson gson = new Gson();
-		String sUser = gson.toJson(user);
-		return sUser;
+		user.setName("zhangsan" + id);
+		user.setUserId(id);
+		System.out.println("当前时间:" + System.currentTimeMillis() + "user:" + user);
+		return user;
 	}
 	
 }
