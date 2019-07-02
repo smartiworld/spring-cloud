@@ -1,5 +1,7 @@
 package org.iworld.ohelp.ipay.controller;
 
+import java.net.URI;
+
 import org.iworld.ohelp.ipay.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -27,7 +29,10 @@ public class IPayController {
 	@GetMapping(value = "/getuserinfo_loaded/{id}")
 	public ServiceInstance getUserInfoOfLoaded(@PathVariable Integer id) {
 		ServiceInstance serviceInstance = loadBalancerClient.choose("MICSERVICE.USER");
-		System.out.println("host:" + serviceInstance.getHost() + ",port:" + serviceInstance.getPort() + ",url:" + serviceInstance.getUri());
+		URI serviceUri = serviceInstance.getUri();
+		System.out.println("host:" + serviceInstance.getHost() + ",port:" + serviceInstance.getPort() + ",url:" + serviceUri);
+		String query = serviceUri.getQuery();
+		System.out.println("query=====" + query);
 		return serviceInstance;
 	}
 	

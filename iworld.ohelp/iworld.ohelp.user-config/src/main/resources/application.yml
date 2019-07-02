@@ -1,11 +1,8 @@
 server:
-  port: 8992
+  port: 8993
 spring:
   application:
     name: micservice.user
-  cloud:
-    config:
-      uri:
 eureka:
   instance:
     preferIpAddress : true
