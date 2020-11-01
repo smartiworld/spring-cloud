@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="iworld.ohelp.ipay" />
+        <module name="iworld.ohelp.order-feign" />
+        <module name="iworld.ohelp.gateway.zuul" />
+        <module name="iworld.ohelp.algorithm" />
+        <module name="iworld.ohelp.user" />
+        <module name="iworld.ohelp.config.server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="iworld.ohelp" target="1.8" />
+      <module name="iworld.ohelp.algorithm" target="1.8" />
+      <module name="iworld.ohelp.config.server" target="1.8" />
+      <module name="iworld.ohelp.gateway.zuul" target="1.8" />
+      <module name="iworld.ohelp.ipay" target="1.8" />
+      <module name="iworld.ohelp.order-feign" target="1.8" />
+      <module name="iworld.ohelp.user" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

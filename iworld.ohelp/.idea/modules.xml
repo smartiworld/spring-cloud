@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/iworld.ohelp.iml" filepath="$PROJECT_DIR$/.idea/iworld.ohelp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iworld.ohelp.algorithm/iworld.ohelp.algorithm.iml" filepath="$PROJECT_DIR$/iworld.ohelp.algorithm/iworld.ohelp.algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iworld.ohelp.config.server/iworld.ohelp.config.server.iml" filepath="$PROJECT_DIR$/iworld.ohelp.config.server/iworld.ohelp.config.server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iworld.ohelp.gateway.zuul/iworld.ohelp.gateway.zuul.iml" filepath="$PROJECT_DIR$/iworld.ohelp.gateway.zuul/iworld.ohelp.gateway.zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iworld.ohelp.ipay/iworld.ohelp.ipay.iml" filepath="$PROJECT_DIR$/iworld.ohelp.ipay/iworld.ohelp.ipay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iworld.ohelp.order-feign/iworld.ohelp.order-feign.iml" filepath="$PROJECT_DIR$/iworld.ohelp.order-feign/iworld.ohelp.order-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iworld.ohelp.user/iworld.ohelp.user.iml" filepath="$PROJECT_DIR$/iworld.ohelp.user/iworld.ohelp.user.iml" />
+    </modules>
+  </component>
+</project>

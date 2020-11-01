@@ -44,6 +44,8 @@
 		<module>iworld.ohelp.user</module>
 		<module>iworld.ohelp.config.server</module>
 		<module>iworld.ohelp.ipay</module>
+		<module>iworld.ohelp.algorithm</module>
 		<module>iworld.ohelp.order-feign</module>
+		<module>iworld.ohelp.gateway.zuul</module>
 	</modules>
 </project>
